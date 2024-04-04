@@ -1,6 +1,8 @@
 package com.demo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class EmployeeList {
@@ -15,7 +17,15 @@ public class EmployeeList {
 		empList.add(new Employee(109, "Aniket", 49000, "Delhi"));
 		empList.add(new Employee(107, "Rohit", 68000, "Nagput"));
 
-		System.out.println(empList);
+		System.out.println("before sorting>" +empList);
+		
+		
+		Collections.sort(empList, new SalaryComparator());
+		
+		
+		
+		
+		System.out.println("after sorting based on salary>>" +empList);
 	}
 
 }
